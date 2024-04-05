@@ -1,15 +1,11 @@
-# -*- coding: utf-8 -*-
-
 import sqlalchemy
 from sqlalchemy.orm import sessionmaker
-from models import create_tables
+from models import create_tables, Publisher, Book, Shop, Stock, Sale
 
-DSN = 'postgresql://postgres:postgres@localhost:5432/books'
-engine = sqlalchemy.create_engine(DSN, client_encoding='utf-8')
+DSN = 'sqlite:////Programs/SQLite/data/books.db'
+engine = sqlalchemy.create_engine(DSN)
 
 create_tables(engine)
 
 Session = sessionmaker(bind=engine)
 session = Session()
-
-session.close()
