@@ -1,0 +1,64 @@
+{
+  "publishers": [
+    {
+      "id": 1,
+      "name": "publisher1"
+    },
+    {
+      "id": 2,
+      "name": "publisher2"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "book1",
+      "id_publisher": 1
+    },
+    {
+      "id": 2,
+      "title": "book2",
+      "id_publisher": 1
+    }
+  ],
+  "shops": [
+    {
+      "id": 1,
+      "name": "shop1"
+    },
+    {
+      "id": 2,
+      "name": "shop2"
+    }
+  ],
+  "stocks": [
+    {
+      "id": 1,
+      "id_book": 1,
+      "id_shop": 2,
+      "count": 50
+    },
+    {
+      "id": 2,
+      "id_book": 2,
+      "id_shop": 2,
+      "count": 150
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "price": 500,
+      "date_sale": "01-01-2024",
+      "id_stock": 1,
+      "count": 30
+    },
+    {
+      "id": 2,
+      "price": 350,
+      "date_sale": "05-03-2024",
+      "id_stock": 2,
+      "count": 90
+    }
+  ]
+}
