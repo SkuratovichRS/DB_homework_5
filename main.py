@@ -19,14 +19,13 @@ def get_data_by_publisher(p_name: str = None, p_id: int = None) -> list:
                  join(Sale).filter(Publisher.name == p_name))
         for result in query.all():
             data.append(result)
-        return data
     if p_id:
         query = (session.query(Book.title, Shop.name, Sale.price, Sale.date_sale)
                  .join(Publisher).join(Stock).join(Shop).
                  join(Sale).filter(Publisher.id == p_id))
         for result in query.all():
             data.append(result)
-        return data
+    return data
 
 
 def print_data(data: list) -> None:
